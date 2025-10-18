@@ -1,0 +1,44 @@
+
+---
+
+### `.gitignore`
+```gitignore
+# Node / Next
+node_modules/
+.next/
+out/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env & local
+.env
+.env.*
+!.env.example
+.vercel/
+.turbo/
+.next/cache/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.iml
+
+# Coverage / tests
+coverage/
+*.lcov
+
+# Misc
+*.swp
+*.swo
+
+# Generated assets
+public/*.map

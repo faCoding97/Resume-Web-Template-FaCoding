@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "image": "/images/profile.png",
+    "linkedin": "www.linkedin.com/in/farazaghababayi",
+    "email": "Facoding97@gmail.com",
+    "domain": "Facoding.elixcode.com"
+  },
+  "about": {
+    "headline": "💡 Full-Stack Developer ",
+    "summary": "I’m a full-stack developer focused on building scalable, maintainable enterprise systems — the kind that run quietly and fast. Day-to-day, I ship with **.NET Core (Web API, MVC)** on the backend and **React / Next.js / Vue.js** on the frontend, styled with **Tailwind CSS** (and Kendo UI where it fits) to deliver clean, responsive UIs.\n\nOn the server side I lean on **layered architecture**, **Dependency Injection**, and **REST principles**, backed by **Entity Framework** and **SQL Server** — plus **MySQL** and **MongoDB** when the problem calls for it. I’ve delivered real-world **ERP / Inventory** and automation projects, including barcode and **QR** workflows, with an eye on performance, caching, and security hardening.\n\nI also explore **AI & ML** — using **TensorFlow**, **PyTorch**, and **OpenCV** — to add practical intelligence to products (from classic image processing to NLP and model-powered features). I’m comfortable wiring up service layers in **ASP.NET MVC / API** and spinning supporting services with **Node.js** and **Python** when needed.\n\nOps-wise, I keep things simple and reliable: **Docker**, Git workflows, and deployments to **Windows (IIS)** and **Linux**. Earlier in my journey I shipped several **Unity** (2D/3D, AR/VR) projects — that game-dev muscle still shapes how I debug, optimize, and design interactions — but my current focus is enterprise platforms and AI-driven systems that move the needle."
+  },
+  "skills": {
+    "Languages": ["C#", "JavaScript", "Python"],
+    "Backend": [
+      ".NET Core",
+      ".NET Framework",
+      "ASP.NET MVC",
+      "ASP.NET API",
+      "REST APIs",
+      "SQL Server"
+    ],
+    "Frontend": [
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Kendo UI",
+      "Tailwind CSS",
+      "Bootstrap",
+      "ASP.NET MVC"
+    ],
+    "Databases": ["SQL", "MySQL", "MongoDB"],
+    "Tools": ["Git", "Docker", "IIS", "Visual Studio", "Unity"],
+    "DevOps": ["Basic CI/CD", "Windows Server", "Linux"],
+    "Other": [
+      "AI/ML (TensorFlow, PyTorch, OpenCV)",
+      "Game Development (Unity, AR/VR)"
+    ]
+  },
+  "portfolio": [
+    {
+      "url": "https://elixcode.com/",
+      "description": "ElixCode is a development firm..."
+    },
+    {
+      "url": "https://erp.elixflare.com/",
+      "description": "This website promotes 'Minimal,' ..."
+    },
+    {
+      "url": "https://restaurant.elixflare.com/",
+      "description": "This website serves as a QR-powered ..."
+    },
+    {
+      "url": "https://coffeeshop.elixflare.com/",
+      "description": "This website is an online presence ..."
+    },
+    {
+      "url": "https://hairinternational.elixflare.com/",
+      "description": "Hair International is a professional ..."
+    }
+  ]
+}

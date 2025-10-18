@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global dark-ish theme */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  background: #1f2937; /* gray-800 */
+}
+
+body {
+  @apply text-gray-200 bg-gray-800 antialiased;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle card hover */
+.card {
+  @apply transition transform hover:scale-[1.01] hover:shadow-glow;
+}
+
+/* Profile ring glow */
+.profile-ring {
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.25));
+}
+
+.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Typing caret effect */
+.typing-caret::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  background: currentColor;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hide canvas on print */
+@media print {
+  #bg-canvas {
+    display: none !important;
+  }
+}
+
+/* tracer glow look */
+/* --- Tracers (اگر از قبل گذاشتی، لازم نیست تکرار بشه) --- */
+.profile-ring .trace {
+  filter: drop-shadow(0 0 6px rgba(147, 197, 253, 0.5));
+  animation: ring-trace 1.25s ease-in-out forwards;
+}
+@keyframes ring-trace {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+/* --- Parallax tilt container --- */
+.photo-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: perspective(600px) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  transition: transform 180ms ease;
+}
+
+/* --- Halo glow (behind image) --- */
+.halo {
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(59, 130, 246, 0.25),
+    transparent 60%
+  );
+  transform: scale(0.98);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.group:hover .halo {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+/* --- Shine sweep overlay --- */
+.photo-shine::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -60%;
+  width: 60%;
+  height: 140%;
+  transform: rotate(20deg) translateX(-20%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+  opacity: 0;
+}
+.group:hover .photo-shine::before {
+  animation: shine-sweep 1100ms ease;
+}
+@keyframes shine-sweep {
+  0% {
+    opacity: 0;
+    transform: rotate(20deg) translateX(-120%);
+  }
+  10% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(20deg) translateX(220%);
+  }
+}
+
+/* --- Status dot pulse --- */
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  border: 2px solid rgba(16, 185, 129, 0.5); /* emerald-500/50 */
+  animation: pulse-dot 1.6s ease-out infinite;
+}
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* --- Shadow glow utility --- */
+/* 3D tilt for cards (CSS vars set from mousemove) */
+.card-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: perspective(900px) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Aurora border sweep on hover using ::after line */
+.card-aurora {
+  position: relative;
+}
+.card-aurora::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    rgba(96, 165, 250, 0),
+    rgba(96, 165, 250, 0.35),
+    rgba(20, 184, 166, 0.35),
+    rgba(96, 165, 250, 0)
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-position 0.6s ease;
+}
+.card-aurora:hover::after {
+  opacity: 1;
+  background-position: 100% 0%;
+}
+
+/* Tiny tag chips */
+.chip {
+  @apply px-2 py-0.5 rounded-full text-[11px] bg-gray-600/40 text-gray-200 border border-gray-500/40;
+}
+
+/* Visit micro-underline + shimmer */
+.visit-btn {
+  position: relative;
+}
+.visit-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(
+    90deg,
+    rgba(147, 197, 253, 0),
+    rgba(147, 197, 253, 0.8),
+    rgba(16, 185, 129, 0.8),
+    rgba(147, 197, 253, 0)
+  );
+  transition: transform 0.35s ease;
+}
+.group:hover .visit-btn::after {
+  transform: scaleX(1);
+}
+
+/* Shadow glow effect */
+/* --- نام با گرادیان شیشه‌ای و هاله --- */
+.hero-name {
+  background: linear-gradient(180deg, #e5e7eb 0%, #cbd5e1 30%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.01em;
+  position: relative;
+  text-shadow: 0 0 24px rgba(147, 197, 253, 0.15);
+}
+
+/* --- خط امضا (کشیده شدن stroke) --- */
+.sig-line path {
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: sig-draw 1.1s ease-out 0.1s forwards;
+}
+@keyframes sig-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --- Rotating words (CSS-only) --- */
+.rotator {
+  height: 1.25em;
+}
+.rotator > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: rot-fade 9600ms ease-in-out infinite;
+}
+.rotator > span:nth-child(1) {
+  animation-delay: 0ms;
+}
+.rotator > span:nth-child(2) {
+  animation-delay: 2400ms;
+}
+.rotator > span:nth-child(3) {
+  animation-delay: 4800ms;
+}
+.rotator > span:nth-child(4) {
+  animation-delay: 7200ms;
+}
+@keyframes rot-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  6% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  24% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* --- Cloud chips با شناوری نرم --- */
+.cloud-chip {
+  @apply px-2.5 py-1 rounded-full text-[11px] sm:text-xs bg-gray-700/50 text-gray-200 border border-gray-600/50;
+  animation: cloud-float 4.5s ease-in-out infinite alternate;
+}
+@keyframes cloud-float {
+  0% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 0 rgba(147, 197, 253, 0));
+  }
+  100% {
+    transform: translateY(-6px);
+    filter: drop-shadow(0 0 10px rgba(147, 197, 253, 0.12));
+  }
+}
+
+/* --- Glow shadow for cards --- */
+/* skill chip micro pulse on hover */
+.skill-chip {
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.skill-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(147, 197, 253, 0.15);
+}
+
