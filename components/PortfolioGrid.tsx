@@ -44,7 +44,7 @@ function SiteCard({
   active: number | null;
   setActive: (i: number | null) => void;
 }) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLAnchorElement | null>(null);
   const [rtt, setRtt] = useState<number | undefined>(undefined);
   const [faviconSrc, setFaviconSrc] = useState<string>(() => {
     const host = hostnameOf(item.url);
@@ -53,16 +53,16 @@ function SiteCard({
   });
 
   // Parallax tilt: بدون state، فقط CSS vars
-  const onMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
+  const onMove: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
     const el = ref.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
-    const px = (e.clientX - (r.left + r.width / 2)) / (r.width / 2); // -1..1
-    const py = (e.clientY - (r.top + r.height / 2)) / (r.height / 2); // -1..1
+    const px = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+    const py = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
     el.style.setProperty("--rx", `${(-py * 5).toFixed(2)}deg`);
     el.style.setProperty("--ry", `${(px * 8).toFixed(2)}deg`);
   };
-  const onLeave = () => {
+  const onLeave: React.MouseEventHandler<HTMLAnchorElement> = () => {
     const el = ref.current;
     if (!el) return;
     el.style.setProperty("--rx", "0deg");
