@@ -49,6 +49,11 @@ export const metadata: Metadata = {
     // بعد از گرفتن کد از Search Console اینو پر کن:
     // google: "paste-your-google-site-verification-code-here"
   },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
