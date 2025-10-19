@@ -39,23 +39,31 @@
   "portfolio": [
     {
       "url": "https://elixcode.com/",
-      "description": "ElixCode is a development firm..."
+      "description": "ElixCode is a development firm ..."
     },
     {
-      "url": "https://erp.elixflare.com/",
-      "description": "This website promotes 'Minimal,' ..."
+      "url": "https://aitechac.com/",
+      "description": "AI Tech Artificial Intelligence institute. Written with vue.js ..."
+    },
+    {
+      "url": "https://anreanvari.elixflare.com/",
+      "description": "A site to display resumes ..."
+    },
+    {
+      "url": "https://hairinternational.elixflare.com/",
+      "description": "Hair International is a professional ..."
     },
     {
       "url": "https://restaurant.elixflare.com/",
       "description": "This website serves as a QR-powered ..."
     },
     {
-      "url": "https://coffeeshop.elixflare.com/",
-      "description": "This website is an online presence ..."
+      "url": "https://erp.elixflare.com/",
+      "description": "This website promotes 'Minimal,' ..."
     },
     {
-      "url": "https://hairinternational.elixflare.com/",
-      "description": "Hair International is a professional ..."
+      "url": "https://coffeeshop.elixflare.com/",
+      "description": "This website is an online presence ..."
     }
   ]
 }
