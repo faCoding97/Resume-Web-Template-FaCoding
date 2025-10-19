@@ -31,7 +31,15 @@ export default function Page() {
 
   return (
     <main className="relative pb-24">
-      <BackgroundCanvas />
+      <BackgroundCanvas
+        density={1.6}
+        maxParticles={260}
+        linkDistance={160}
+        repelRadius={130}
+        wander={0.012}
+        maxSpeed={1.6}
+        autoPilot
+      />
 
       {/* محتوا بالای بک‌گراند */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 md:pt-28">

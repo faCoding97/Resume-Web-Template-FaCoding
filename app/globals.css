@@ -324,3 +324,19 @@ html {
   box-shadow: 0 0 16px rgba(147, 197, 253, 0.15);
 }
 
+/* Aurora hover → touch */
+.card-aurora.touching::after {
+  opacity: 1;
+  background-position: 100% 0%;
+}
+
+/* Visit underline hover → touch */
+.group.touching .visit-btn::after {
+  transform: scaleX(1);
+}
+
+/* Card glow hover → touch */
+.group.touching .pointer-events-none {
+  /* همون overlay glow که -z-10 هست */
+  opacity: 0.2;
+}
