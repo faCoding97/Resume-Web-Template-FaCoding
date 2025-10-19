@@ -11,7 +11,9 @@ type Props = {
 
 export default function PersonalInfo({ linkedin, email, domain }: Props) {
   const qrRef = useRef<HTMLCanvasElement | null>(null);
-  const [copied, setCopied] = useState<null | "email" | "linkedin">(null);
+  const [copied, setCopied] = useState<null | "email" | "linkedin" | "github">(
+    null
+  );
 
   // strip protocol for display and sane links
   const normalizeHttps = (url: string) =>
@@ -27,13 +29,16 @@ export default function PersonalInfo({ linkedin, email, domain }: Props) {
     link.click();
   };
 
-  const copyToClipboard = async (text: string, which: "email" | "linkedin") => {
+  const copyToClipboard = async (
+    text: string,
+    which: "email" | "linkedin" | "github"
+  ) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(which);
       setTimeout(() => setCopied(null), 1400);
     } catch {
-      // no-op
+      /* no-op */
     }
   };
 
@@ -199,7 +204,7 @@ export default function PersonalInfo({ linkedin, email, domain }: Props) {
               </button>
               <button
                 onClick={() =>
-                  copyToClipboard("https://github.com/faCoding97", "GitHub URL")
+                  copyToClipboard("https://github.com/faCoding97", "github")
                 }
                 className="rounded-md bg-gray-600/40 px-3 py-1.5 text-sm font-medium text-gray-200 hover:bg-gray-600/60"
                 title="Copy GitHub URL">
