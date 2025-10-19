@@ -162,7 +162,7 @@ function SiteCard({
       target="_blank"
       rel="noreferrer"
       ref={ref}
-      className={`group relative z-0 card card-tilt card-aurora bg-gray-700/40 border border-gray-600/50 rounded-2xl p-4 hover:bg-gray-700/60 focus:outline-none focus:ring-2 focus:ring-blue-400/40 overflow-hidden ${
+      className={`block group relative z-0 card card-tilt card-aurora bg-gray-700/40 border border-gray-600/50 rounded-2xl p-4 hover:bg-gray-700/60 focus:outline-none focus:ring-2 focus:ring-blue-400/40 overflow-hidden ${
         touching ? "touching" : ""
       }`}
       onPointerEnter={onPointerEnter}
