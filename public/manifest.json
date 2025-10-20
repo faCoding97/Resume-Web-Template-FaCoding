@@ -1,0 +1,46 @@
+{
+  "name": "FaCoding — Faraz Aghababayi",
+  "short_name": "FaCoding",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "description": "Portfolio & resume of Faraz Aghababayi (FaCoding). Full-stack developer: .NET Core, React/Next.js, ERP/Inventory, QR/Barcode, integrations.",
+  "lang": "en",
+  "dir": "ltr",
+  "theme_color": "#1f2937",
+  "background_color": "#111827",
+  "categories": ["productivity", "business", "portfolio"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}

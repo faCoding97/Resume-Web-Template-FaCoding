@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://facoding.elixcode.com"),
+  metadataBase: new URL("https://facoding.elixflare.com"),
   title: "Faraz Aghababayi — Full-Stack Developer (Next.js, .NET Core)",
   description:
     "Portfolio & resume of Faraz Aghababayi (FaCoding). Full-stack developer specialized in .NET Core, React/Next.js, ERP/Inventory, QR/Barcode, and integrations.",
@@ -19,15 +19,17 @@ export const metadata: Metadata = {
     "QR",
     "Barcode",
   ],
-  authors: [{ name: "Faraz Aghababayi", url: "https://facoding.elixcode.com" }],
+  authors: [
+    { name: "Faraz Aghababayi", url: "https://facoding.elixflare.com" },
+  ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: "https://facoding.elixcode.com",
+    url: "https://facoding.elixflare.com",
     siteName: "FaCoding — Portfolio",
     title: "Faraz Aghababayi — Full-Stack Developer",
     description:
-      "Full-stack developer: .NET Core, React/Next.js, ERP/Inventory, QR/Barcode, integrations.",
+      "Full-stack developer: .NET Core, React/Next.js/Vue.js, ERP/Inventory/BPMS, QR/Barcode, integrations.",
     images: [
       {
         url: "/images/profile.png",
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   verification: {
     // بعد از گرفتن کد از Search Console اینو پر کن:
-    // google: "paste-your-google-site-verification-code-here"
+    google: "dKQzs1JM_VAihmAWs_4w86bKV9GGaqnpIiJzsWKCEqg",
   },
   icons: {
     icon: [
@@ -58,6 +60,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
+  manifest: "/manifest.json",
 };
 
 export const viewport: Viewport = {
@@ -103,9 +106,12 @@ export default function RootLayout({
             "@type": "Person",
             name: "Faraz Aghababayi",
             alternateName: ["FaCoding"],
-            url: "https://facoding.elixcode.com",
+            url: "https://facoding.elixflare.com",
             sameAs: [
               "https://www.linkedin.com/in/farazaghababayi",
+              "https://github.com/faCoding97",
+              "https://facoding.elixflare.com",
+              "https://www.instagram.com/Faraz_aghababayi",
               // اضافه کن: GitHub/Twitter/StackOverflow/Medium/Dev.to
               // "https://github.com/<your-username>",
               // "https://twitter.com/<your-handle>",
@@ -119,6 +125,7 @@ export default function RootLayout({
               "Entity Framework",
               "SQL Server",
               "ERP",
+              "BPMS",
               "Inventory",
               "QR",
               "Barcode",
@@ -126,8 +133,15 @@ export default function RootLayout({
               "Vue.js",
               "Node.js",
               "Python",
+              "API Integrations",
+              "AI Services",
+              "UX/UI Design",
+              "JavaScript",
+              "TypeScript",
+              "Java",
+              "Unity",
             ],
-            image: "https://facoding.elixcode.com/images/profile.png",
+            image: "https://facoding.elixflare.com/images/profile.png",
           })}
         </Script>
 
@@ -140,10 +154,10 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "FaCoding — Portfolio",
-            url: "https://facoding.elixcode.com",
+            url: "https://facoding.elixflare.com",
             potentialAction: {
               "@type": "SearchAction",
-              target: "https://facoding.elixcode.com/?q={search_term_string}",
+              target: "https://facoding.elixflare.com/?q={search_term_string}",
               "query-input": "required name=search_term_string",
             },
           })}
