@@ -48,8 +48,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   verification: {
-    // بعد از گرفتن کد از Search Console اینو پر کن:
-    google: "dKQzs1JM_VAihmAWs_4w86bKV9GGaqnpIiJzsWKCEqg",
+    google: `dKQzs1JM_VAihmAWs_4w86bKV9GGaqnpIiJzsWKCEqg`,
   },
   icons: {
     icon: [
