@@ -75,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-        {/* Pre-hydration sanitize (همون که داشتی) */}
+        {/* Pre-hydration sanitize */}
         <Script id="sanitize-dom" strategy="beforeInteractive">
           {`
             try {
@@ -111,13 +111,11 @@ export default function RootLayout({
               "https://github.com/faCoding97",
               "https://facoding.elixflare.com",
               "https://www.instagram.com/Faraz_aghababayi",
-              // اضافه کن: GitHub/Twitter/StackOverflow/Medium/Dev.to
-              // "https://github.com/<your-username>",
-              // "https://twitter.com/<your-handle>",
-              // "https://stackoverflow.com/users/<id>",
             ],
             jobTitle: "Full-Stack Developer",
             knowsAbout: [
+              "Faraz Aghababayi",
+              "FaCoding",
               "Next.js",
               "React",
               ".NET Core",
@@ -161,7 +159,24 @@ export default function RootLayout({
             },
           })}
         </Script>
+
+        {/* --- ✅ Explicit Open Graph tags --- */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Faraz Aghababayi — Full-Stack Developer (Next.js, .NET Core)"
+        />
+        <meta
+          property="og:description"
+          content="Portfolio & resume of Faraz Aghababayi (FaCoding). Full-stack developer specialized in .NET Core, React/Next.js, ERP/Inventory, QR/Barcode, and integrations."
+        />
+        <meta
+          property="og:image"
+          content="https://facoding.elixflare.com/images/profile.png"
+        />
+        <meta property="og:url" content="https://facoding.elixflare.com" />
       </head>
+
       <body
         suppressHydrationWarning
         className="min-h-dvh bg-gray-800 text-gray-200 selection:bg-blue-500/30">
