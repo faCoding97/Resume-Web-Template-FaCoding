@@ -28,7 +28,7 @@
       "Bootstrap",
       "ASP.NET MVC"
     ],
-    "Databases": ["SQL", "MySQL", "MongoDB"],
+    "Databases": ["SQL", "MySQL", "Supabase", "MongoDB"],
     "Tools": ["Git", "Docker", "IIS", "Visual Studio", "Unity"],
     "DevOps": ["Basic CI/CD", "Windows Server", "Linux"],
     "Other": [
@@ -38,8 +38,8 @@
   },
   "portfolio": [
     {
-      "url": "https://elixcode.com/",
-      "description": "ElixCode is a development firm ..."
+      "url": "https://www.myrug.co.za/",
+      "description": "Explore a curated selection of hand-picked rugs, from timeless Persian pieces to modern designs. ..."
     },
     {
       "url": "https://aitechac.com/",
@@ -48,6 +48,10 @@
     {
       "url": "https://anreanvari.elixflare.com/",
       "description": "A site to display resumes ..."
+    },
+    {
+      "url": "https://elixcode.com/",
+      "description": "ElixCode is a development firm ..."
     },
     {
       "url": "https://hairinternational.elixflare.com/",
